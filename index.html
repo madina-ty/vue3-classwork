@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+            <div id="app">
+                Name: {{name}}, <br>
+                Surname: {{surname}}, <br>
+                Age: {{age}},<br>
+                Friends: {{randomNumber}}, <br>
+                City: {{city}}
+                <div class="photo">
+                    <img src="./img/5260653794897813909.jpg" alt="">
+                </div>
+                <div class="like">
+                    <a href="#" @click="likes()"><i class="fa-solid fa-heart" >{{counter}}</i></a>
+                </div>
+            </div>
+    <script>
+Vue.createApp({
+  data() {
+    return {
+      name: "Bony",
+      surname: "Ty",
+      age: "3",
+      randomNumber: 0,
+      city: "Almaty",
+      counter: 0
+    }
+  },
+  methods: {
+    likes() {
+      this.counter++;
+    }
+  },
+  mounted() {
+    this.randomNumber = Math.floor(Math.random() * 11);
+  }
+}).mount('#app');
+    </script>
+   
+</body>
+</html>

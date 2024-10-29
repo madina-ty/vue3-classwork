@@ -1,0 +1,27 @@
+#app {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .photo img {
+    max-width: 200px;
+    border-radius: 10px;
+  }
+  
+  .like {
+    margin-top: 130px;
+  }
+  
+  .like a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .like a:hover {
+    color: red;
+  }
